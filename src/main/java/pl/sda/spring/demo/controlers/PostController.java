@@ -32,4 +32,14 @@ public class PostController {
         postService.removePost(userId, postId);
     }
 
+    @PostMapping("/addComment/{post_id}/{user_id}")
+    public String addComment(@PathVariable Long post_id, @PathVariable Long user_id, String message){
+        return postService.addComment(post_id, user_id, message);
+    }
+
+    @DeleteMapping("/deleteComment/{user_id}/{comment_id}")
+    public String deleteComment(@PathVariable Long user_id, @PathVariable Long comment_id){
+        return postService.removeComment(user_id, comment_id);
+    }
+
 }

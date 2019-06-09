@@ -48,7 +48,7 @@ public class HomeControler {
 
     @PostMapping("/setAdmin/{id}")
     public User setAdmin(@PathVariable Long id){
-        return userService.setRole(id, 2L);
+        return userService.setRole(id, 17L);
     }
 
     @GetMapping("/user/{id}")
